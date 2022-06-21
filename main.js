@@ -1,17 +1,3 @@
-// const data = [
-//   {
-//     'buoi': 'aaaaaaaa',
-//     'chuyen_de': 'aaa',
-//     'baigiang': [
-//       {
-//         'ten': 'aaaaaa',
-//         'src': 'aaa'
-//       }
-//     ],
-//     'file': 'aaaaa'
-//   }
-// ]
-
 let getData = () => {
   return new Promise((resolve, reject) => {
     $.ajax({
@@ -43,27 +29,19 @@ let renderData = async (data) => {
       <td>${data[i].buoi}</td>
       <td>${data[i].chuyen_de}</td>
       <td>${baigiang}</td>
-      <td>${data[i].file}</td>
+      <td>
+        <a href="${data[i].file}" type="button" class="btn btn-primary">
+          Download
+        </a>
+      </td>
     </tr>`
     await $('#displayData').append(dataRender);
   }
 }
 
-// let showVideo = (e) => {
-//   console.log(e);
-// }
 
 $(async () => {
-  // $.ajax({
-  //   type: "GET",
-  //   dataType: 'json',
-  //   url: 'https://api-get-video.herokuapp.com/api',
-  //   success: function (response) {
-  //     console.log(response);
-  //   }
-  // });
   const data = await getData();
-  // console.log(data);
   await renderData(data);
 
   $('.showVideo').click((e) => {
