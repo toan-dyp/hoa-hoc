@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHONG HÓA HỌC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./main.js"></script>
+</head>
+
+<body>
+  <h1>LIVE FACE PHONG HÓA HỌC</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Buổi Live</th>
+        <th scope="col">Chuyên đề</th>
+        <th scope="col">Bài giảng</th>
+        <th scope="col">File</th>
+      </tr>
+    </thead>
+    <tbody id="displayData" class="table-group-divider"></tbody>
+  </table>
+
+  <!-- Modal -->
+  <div class="modal fade" id="model__Video" tabindex="-1" aria-labelledby="model__Video__Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="model__Video__Label">Video</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <video class="ratio ratio-16x9" id="video" src="" controls autoplay controlsList="nodownload"></video>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
