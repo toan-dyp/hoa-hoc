@@ -24,12 +24,10 @@ let renderData = async (data) => {
       `
     }
 
-    let downloadFile = !data[i].file ? `
-    <td>
+    let downloadFile = data[i].file ? `
       <a href="${data[i].file}" type="button" class="btn btn-primary">
         Download
-      </a>
-    </td>
+      </a>  
     ` : '';
 
     let dataRender = `
@@ -37,7 +35,7 @@ let renderData = async (data) => {
       <td>${data[i].buoi}</td>
       <td>${data[i].chuyen_de}</td>
       <td>${baigiang}</td>
-      ${downloadFile};
+      <td>${downloadFile}</td>
     </tr>`
     await $('#displayData').append(dataRender);
   }
