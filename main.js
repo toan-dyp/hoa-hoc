@@ -18,7 +18,7 @@ let renderData = async (data) => {
     for (j = 0; j < data[i].baigiang.length; j++) {
       let video = data[i].baigiang[j];
       baigiang += `
-          <button value="${video.src}" type="button" class="btn btn-primary showVideo" data-bs-toggle="modal" data-bs-target="#model__Video">
+          <button value="${video.src}" type="button" class="btn btn-primary showVideo mt-1" data-bs-toggle="modal" data-bs-target="#model__Video">
             ${video.ten}
           </button>
       `
